@@ -18,6 +18,9 @@ return new class extends Migration {
             $table->string("segundoNombre");
             $table->string("primerApellido");
             $table->string("segundoApellido");
+            $table->string("cedula");
+            $table->boolean("activo")->default(true);
+
             $table->unsignedBigInteger("idDepartamento")->nullable();
             $table->unsignedBigInteger("idCargo")->nullable();
 

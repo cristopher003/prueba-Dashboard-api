@@ -26,6 +26,8 @@ class User extends Authenticatable
         'segundoApellido',
         'idDepartamento',
         'idCargo',
+        'cedula',
+        'activo',
     ];
 
     

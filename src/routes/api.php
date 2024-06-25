@@ -1,10 +1,9 @@
 <?php
 
-use App\Http\Controllers\App\DepartmentController;
-use App\Http\Controllers\App\PositionController;
-use App\Http\Controllers\App\UserController;
+use App\Http\Controllers\Api\DepartmentController;
+use App\Http\Controllers\Api\PositionController;
+use App\Http\Controllers\Api\UserController;
 use App\Http\Middleware\CorsMiddleware;
-use App\Models\Position;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +13,11 @@ Route::middleware('cors')->get('/hola', function () {
 });
 
 Route::middleware(CorsMiddleware::class)->apiResource('users', UserController::class);
+// Route::middleware([CorsMiddleware::class])->post('/users',  [UserController::class, 'store']);
+// Route::middleware([CorsMiddleware::class])->post('/users', [UserController::class, 'store']);
+
+
+// Route::post('/user', [UserController::class, 'create']);
 
 Route::apiResource('departments', DepartmentController::class);
 

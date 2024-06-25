@@ -30,6 +30,7 @@ class UserFactory extends Factory
             'segundoNombre' => fake()->name(),
             'primerApellido' => fake()->name(),
             'segundoApellido' => fake()->name(),
+            'cedula' => fake()->numberBetween(0000000000,2147483647),
             // 'idDepartamento' => $departments->random(),
             // 'idCargo' => $positions->random(),
             'created_at' => now(),
